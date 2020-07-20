@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Page3 - DOM manipulation via plain JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+        ol
+            {
+                display:table;
+                margin: 0 
+                auto;
+            }
+            li {text-align: left;}
+            h2 {color: steelblue;}
+            h3 {color: steelblue;
+                margin-top: 0px;
+                margin-bottom: 1em;}
+            .container {
+                font-family:sans-serif; 
+                margin:auto;width:60%;}
+            .lists {
+                border: 1px solid; 
+                border-color:
+                    steelblue;
+                border-radius: 3px; 
+                float:left; width: 12em;
+                margin-right:2px;} 
+            .lists1 {
+                color: blue;
+                border: 1px solid; 
+                border-color:
+                    steelblue;
+                border-radius: 3px; 
+                float:left; width: 12em;
+                margin-right:2px;} 
+            .lists2 {
+                color: red;
+                border: 1px solid; 
+                border-color:
+                    steelblue;
+                border-radius: 3px; 
+                float:left; width: 12em;
+                margin-right:2px;} 
+            .lists h4 {
+                text-align: center; 
+                color: steelblue} 
+            .lists div {
+                padding: 3px;text-align: center;} .inputs {
+                margin-bottom:12px;} 
+            </style>
+</head>
+
+<body>
+    <a href="/CA1">Tilbage til index</a>
+    <br />
+    <div class="container">
+        <h1>Page3 - DOM manipulation via plain JavaScript</h1>
+
+        <h3>And getting used to the JavaScript Array</h3>
+
+        <div class='inputs'>
+            <input id="newboy" placeholder='Add boy' />
+            <button id='addboy'>Add Boy</button>
+            <input id="newgirl" placeholder='Add girl' />
+            <button id='addgirl'>Add Girl</button>
+            <button id='reset' style='background-color:red'>RESET</button>
+        </div>
+
+        <div class='inputs'>
+            <button id='removeboy'>Remove boy</button>
+            <button id='removegirl'>Remove girl</button>
+            <Input type='radio' name='direction' id='first' /> Remove first
+            <Input type='radio' name='direction' id='last' /> Remove last
+            <button id='reverse'>Reverse all</button>
+            <button id='sort'>Sort all</button>
+        </div>
+
+        <div class="lists1">
+            <h4 style="text-align: center">Boys</h4>
+            <ol class="names" id="boys"></ol>
+        </div>
+
+        <div class="lists2">
+            <h4 style="text-align: center">Girls</h4>
+            <ol class="names" id="girls"></ol>
+        </div>
+
+        <div class="lists">
+            <h4>All</h4>
+            <ol id="all"></ol>
+        </div>
+        <div>
+            <button id='reset'>RESET</button>
+
+            <script src="script.js"></script>
+</body>
+
+</html>

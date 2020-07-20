@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .des {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+        }
+
+        .fa {
+            font-size: 50px;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<title>DOM Manipulation</title>
+
+<body>
+<h4>DOM Manipulation</h4>
+
+<div class="p1 des">
+    <p> Ein neuer Versuch </p>
+</div>
+<div class="p2">
+    <p> Ein zweiter Versuch </p>
+</div>
+<div class="p3">
+    <p> Ein dritter Versuch </p>
+</div>
+<div class="p4">
+    <p> Ein vierter Versuch </p>
+</div>
+
+<div>
+    <button id="btn">Click!</button>
+</div>
+<br><br>
+<div>
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+</div>
+
+
+<script>
+    let value;
+    let count = 0;
+
+    // if you want to remove or add a class from a html tag.
+
+    // document.querySelector('.p1').classList.remove('des');
+    // document.querySelector('.p2').classList.add('des');
+
+    // How to use toggle.
+    const btn = document.getElementById('btn');
+    btn.onclick = function (event) {
+
+        count === 4 ? count = 1 : count++;
+        console.log(count);
+        switch (count) {
+            case 1:
+                document.querySelector('.p1').classList.toggle('des');
+                document.querySelector('.p2').classList.toggle('des');
+                break;
+            case 2:
+                document.querySelector('.p2').classList.toggle('des');
+                document.querySelector('.p3').classList.toggle('des');
+                break;
+            case 3:
+                document.querySelector('.p3').classList.toggle('des');
+                document.querySelector('.p4').classList.toggle('des');
+                break;
+            case 4:
+                document.querySelector('.p4').classList.toggle('des');
+                document.querySelector('.p1').classList.toggle('des');
+
+
+        }
+    }
+
+    function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+    }
+</script>
+</body>
+
+</html>
