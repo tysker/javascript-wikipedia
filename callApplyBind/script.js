@@ -1,16 +1,17 @@
-// The purpose of the methods call(), apply() and bind()
-
-// The different between call() and apply()
-// Note: While the syntax of this function is almost identical to that of call(), the fundamental difference is that call() 
-// accepts an argument list, while apply() accepts a single array of arguments.
-//********************************************************************************************************* */
-// call()
-// call() provides a new value of this to the function/method. With call, you can write a method once 
-// and then inherit it in another object,
-// without having to rewrite the method for the new objec
-//****************************************************************************************************** */
-// The call() allows for a function/method belonging to one object to be assigned and called for a different object.
-// In this case the object Product is assigned and called from the Food object
+/** The purpose of the methods call(), apply() and bind()
+*
+* The different between call() and apply()
+* Note: While the syntax of this function is almost identical to that of call(), the fundamental difference is 
+* that call() accepts an argument list, while apply() accepts a single array of arguments.
+*********************************************************************************************************
+* call()
+* call() provides a new value of this to the function/method. With call, you can write a method once 
+* and then inherit it in another object,
+* without having to rewrite the method for the new object
+******************************************************************************************************
+* The call() allows for a function/method belonging to one object to be assigned and called for a different object.
+* In this case the object Product is assigned and called from the Food object
+**/
 
 
 function Product(name, price) {
@@ -25,8 +26,8 @@ function Origin(countryOfOrigin){
   function Food(name, price, countryOfOrigin) {
     Product.call(this, name, price);
     Origin.call(this,countryOfOrigin);
-    //this.
-  }
+  };
+
   var milch = new Food("Milch",10,"Germany");
 
   console.log(new Food('cheese', 5, "Turkey").name);
@@ -39,7 +40,7 @@ function Origin(countryOfOrigin){
 // The apply() method calls a function with a given this value, 
 // and arguments provided as an array (or an array-like object).
 
-//Using apply to append an array to another
+// Using apply to append an array to another
 var array = ['a', 'b'];
 var elements = [0, 1, 2];
 array.push.apply(array, elements);

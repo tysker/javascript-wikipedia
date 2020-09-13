@@ -20,7 +20,6 @@ retirmentUs(1990);
 let retirmentEU = retirement(65)(1977);
 
 /** 
-
 interviewQuestion = (job) => {
     if(job === 'designer') {
         return (name) => {
@@ -36,6 +35,7 @@ interviewQuestion = (job) => {
 };
 */
 
+// Here we changed the above function to a function closure
 function interviewQuestion(job) {
   return function (name) {
     if (job === "designer") {
